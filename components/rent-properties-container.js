@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PropertyCard from "./property-card";
 
 const RentPropertiesContainer = () => {
@@ -41,19 +42,21 @@ const RentPropertiesContainer = () => {
             propMinWidth="355px"
             propMaxWidth="400px"
           />
-          <PropertyCard
-            imageDimensions="/unsplashrlwe8f8anoc9@2x.png"
-            imageDimensionIds="/car6.svg"
-            imageDimensionValues="/bathtub.svg"
-            imageDimensionIdsAndValue="/arrowsout3.svg"
-            imageDimensionIdsAndValue2="/ellipse-1@2x.png"
-            imageDimensionIdsAndValue3="/sharenetwork7.svg"
-            imageDimensionIdsAndValue4="/heart2.svg"
-            imageDimensionIdsAndValue5="/plus3.svg"
-            propWidth="400px"
-            propMinWidth="355px"
-            propMaxWidth="400px"
-          />
+          <Link href="/propertiespage">
+            <PropertyCard
+              imageDimensions="/unsplashrlwe8f8anoc9@2x.png"
+              imageDimensionIds="/car6.svg"
+              imageDimensionValues="/bathtub.svg"
+              imageDimensionIdsAndValue="/arrowsout3.svg"
+              imageDimensionIdsAndValue2="/ellipse-1@2x.png"
+              imageDimensionIdsAndValue3="/sharenetwork7.svg"
+              imageDimensionIdsAndValue4="/heart2.svg"
+              imageDimensionIdsAndValue5="/plus3.svg"
+              propWidth="400px"
+              propMinWidth="355px"
+              propMaxWidth="400px"
+            />
+          </Link>
           <PropertyCard
             imageDimensions="/unsplashrlwe8f8anoc10@2x.png"
             imageDimensionIds="/car6.svg"
@@ -69,11 +72,13 @@ const RentPropertiesContainer = () => {
           />
         </div>
       </div>
-      <button className="cursor-pointer [border:none] py-3 px-6 bg-steelblue rounded flex flex-row items-start justify-start hover:bg-steelblue">
-        <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
-          Load more listing
-        </div>
-      </button>
+      <Link href="/PropertiesPage">
+        <button className="cursor-pointer [border:none] py-3 px-6 bg-steelblue rounded flex flex-row items-start justify-start hover:bg-steelblue">
+          <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
+            Load more listing
+          </div>
+        </button>
+      </Link>
     </div>
   );
 };

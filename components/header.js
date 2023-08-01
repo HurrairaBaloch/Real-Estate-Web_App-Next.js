@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import Link from "next/link";
 
 const Header = ({ hamburger, topContainerAlignSelf, logoFlex, logoWidth }) => {
   const topHeaderStyle = useMemo(() => {
@@ -23,7 +24,10 @@ const Header = ({ hamburger, topContainerAlignSelf, logoFlex, logoWidth }) => {
         className="flex-1 flex flex-row items-center justify-between"
         style={topContainerStyle}
       >
-        <div className="flex flex-row items-center justify-center gap-[8px]">
+        <Link
+          href="/"
+          className="flex flex-row items-center justify-center gap-[8px]"
+        >
           <img className="relative w-11 h-11" alt="" src="/houseline.svg" />
           <div className="flex flex-col items-start justify-start">
             <div className="relative leading-[24px] font-semibold">REIS</div>
@@ -31,7 +35,7 @@ const Header = ({ hamburger, topContainerAlignSelf, logoFlex, logoWidth }) => {
               Real State
             </div>
           </div>
-        </div>
+        </Link>
         <div className="flex flex-row items-center justify-end gap-[36px] text-sm text-primary-900 sm:flex">
           <div className="flex flex-row items-start justify-start gap-[30px] lg:hidden">
             <div className="relative leading-[22px]">HOME</div>
